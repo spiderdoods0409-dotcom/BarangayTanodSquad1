@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emptech Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-fluid position-relative">
+            <a class="navbar-brand" href="Main.html">Klinik</a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2>Time Management and Planning Techniques</h2>
+                <p><strong>The Pomodoro Technique:</strong> Work in focused, 25-minute intervals, followed by a 5-minute break.</p>
+                <p><strong>Time Blocking:</strong> Schedule specific blocks of time in your calendar for certain tasks.</p>
+                <p><strong>Prioritize Your To-Do List:</strong> Rank your tasks by importance and urgency.</p>
+                <p><strong>Create a Routine:</strong> Having a consistent daily routine can train your brain to get to work at certain times.</p>
+                <div style="clear: right; max-width: 500px; margin-left: auto; margin-right: 0;">
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href="Blog.html"]').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.body.style.transition = "opacity 0.7s";
+                document.body.style.opacity = "0";
+                setTimeout(function() {
+                    window.location.href = "Blog.html";
+                }, 700);
+            });
+        });
+
+        window.addEventListener('pageshow', function(event) {
+            document.body.style.transition = "opacity 0.7s";
+            document.body.style.opacity = "1";
+        });
+        document.body.style.opacity = "0";
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.body.style.opacity = "1";
+            }, 10);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
